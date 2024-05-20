@@ -32,12 +32,12 @@ of(1, 2, 3, 4).pipe(
   tap(x => console.log(`Original item: ${x}`)),
   filter(x => x % 2 === 0),
   map(x => x * x),
-).subscribe(x => console.log(`Subscribed item: ${x}`));
+).subscribe(x => console.log(`Observer got next item: ${x}`));
 
 // -- Ausgabe --
 // Original item: 1
 // Original item: 2
-// Subscribed item: 4
+// Observer got next item: 4
 // Original item: 3
 // Original item: 4
-// Subscribed item: 16
+// Observer got next item: 16
