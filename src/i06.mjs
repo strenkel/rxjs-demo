@@ -23,9 +23,10 @@ let search = function(searchString) {
   return new Observable(subscriber => {
     setTimeout(() => {
       subscriber.next(searchString + "-result");
+      subscriber.complete();
     }, 20);  
   });
-}
+};
 
 // Nun kann man die Suchstrings mit dem Map-Operator elegant der Suche übergeben:
 // Damit erhält man einen Observable, das Observables emmitiert, ein sogenanntes Higher-Order Observable:
