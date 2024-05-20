@@ -35,13 +35,13 @@ let search = function(searchString) {
 
 // Mit map() wird der Suchstring getrimmt und filter startet die Suche erst, wenn mindeststens 3 
 // Zeichen eingegeben wurden. Interessant ist debounceTime(). Hier werden die Items nur weiterleitet,
-// wenn zum vorherigem Item eine gewisse Zeit vergangen ist. Und distinctUntilChanged() filtert
-// aufeinanderfolgende Doubletten heraus. Zusammen haben wir mit wenigen Operatoren eine
+// wenn zum vorherigem Item eine gewisse Zeit vergangen ist. distinctUntilChanged() filtert
+// aufeinanderfolgende Doubletten heraus. Zusammen haben wir mit wenigen Codezeilen eine
 // leistungsfähige und gut verständliche Suche implementiert:
 
 input.pipe(
   map(searchString => searchString.trim()),
-  filter((searchString) => searchString.length >= 3),
+  filter(searchString => searchString.length >= 3),
   debounceTime(100),
   distinctUntilChanged(),
   switchMap(searchString => search(searchString))
