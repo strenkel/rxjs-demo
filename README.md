@@ -17,7 +17,7 @@ Mit Promises (ES2015) und async/await (ES2017) gibt es wohletablierte Lösungen 
 
 RxJS scheint mir hier der nächste Schritt zu sein.
 
-## Getting startet
+## Getting started
 
 Um die Codebeispiele auszufüfren, muss man lediglich [Node](https://nodejs.org) installiert haben. Das Projekt installiert man mit:  
 
